@@ -1,0 +1,22 @@
+.chat__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    color: white;
+
+}
+
+.chat__header_left{
+    display: flex;
+    /* justify-content: spa; */
+}
+
+.chat__header_right{
+    color: grey;
+    cursor: pointer;
+}
+
+.chat__header_right:hover{
+    color: white;
+}

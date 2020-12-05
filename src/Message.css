@@ -1,0 +1,20 @@
+.message{
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+}
+
+.message__info{
+    display: flex;
+    color: white;
+    align-items: center;
+}
+.message__info > p{
+    padding-left: 10px ;
+}
+
+
+.message__text{
+    color: white;
+    padding: 10px;
+}

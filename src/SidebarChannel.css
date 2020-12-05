@@ -1,0 +1,9 @@
+.sidebar_channelName{
+    display: flex;
+    color: white;
+    padding: 10px;
+}
+
+.sidebar_channelName:hover{
+    color: green;
+}
