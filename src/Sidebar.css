@@ -95,3 +95,7 @@
     flex-direction: column;
     padding-right: 10px;
 }
+
+.sidebar__avator{
+    cursor: pointer;
+}

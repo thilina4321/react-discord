@@ -11,8 +11,10 @@ import Headset from '@material-ui/icons/Headset';
 import './Sidebar.css'
 import SidebarChannel from './SidebarChannel';
 
-function Sidebar() {
+function Sidebar(props) {
+    console.log(props.channels);
     return (
+        
         <div className="sidebar">
             <div className="sidebar__top"> FD 115 
             <ExpandMore />
@@ -24,17 +26,23 @@ function Sidebar() {
                         <ExpandMore></ExpandMore>
                         <div> Text Channel </div>
                     </div>
-                        <Add className="sidebar__add"/>
+                        <div onClick={props.addChannel}>
+                            <Add 
+                            className="sidebar__add"/>
+                        </div>
                 </div>
 
-                <SidebarChannel />
-                <SidebarChannel />
-                <SidebarChannel />
+                {props.channels.map(ch=>{
+                    return <SidebarChannel 
+                    id = {ch.id}
+                    name = {ch.channelName.channelName}
+                    key={ch.id}/> 
+                })}
             </div>
 
             <div className="sidebar__voice">
                 <SignalCellular1Bar className="sidebar__voiceIcon"/>
-
+ 
                 <div className="sidebar__voiceInfo">
                     <h3> Voice Connected </h3>
                     <p> Stream </p>
@@ -47,9 +55,16 @@ function Sidebar() {
             </div>
 
             <div className="sidebar__profile">
-                <Avatar className="sidebar__avator"></Avatar>
+                <div onClick={props.logout}
+                className="sidebar__avator">
+                    <Avatar 
+                    src={props.image}
+                    className="sidebar__avator">
+                    </Avatar>
+                </div>
+                
 
-                <div className="sidebar__profile__name"> Thilina </div>
+                <div className="sidebar__profile__name"> {props.name} </div>
 
                 <div className="sidebar__profile__icons">
                     <Mic />

@@ -1,10 +1,11 @@
 import React from 'react'
 import './SidebarChannel.css'
 
-function SidebarChannel({id, name}) {
+function SidebarChannel(props) {
     return (
         <div className="sidebar__channel">
-            <div className="sidebar_channelName"> #Youtube  </div>
+            <div 
+             className="sidebar_channelName"> #{props.name}  </div>
         </div>
     )
 } 
