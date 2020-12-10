@@ -34,6 +34,7 @@ function Sidebar(props) {
 
                 {props.channels.map(ch=>{
                     return <SidebarChannel 
+                    getChannel={props.getChannel}
                     id = {ch.id}
                     name = {ch.channelName.channelName}
                     key={ch.id}/> 

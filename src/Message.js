@@ -1,19 +1,22 @@
-import React from 'react'
-import Avatar from '@material-ui/core/Avatar';
-import './Message.css'
+import React from "react";
+import Avatar from "@material-ui/core/Avatar";
+import "./Message.css";
 
-function Message() {
+const Message = (props)=> {
     return (
-        <div className="message">
-            <div className="message__info">
-                <Avatar className="message__avator"/>
-                <p> Thilina dilshan at 12.00 AM </p>
-            </div>
-            <div className="message__text">
-                <h3> This is the message section </h3>
-            </div>
+      <div className="message">
+        <div className="message__info">
+          <Avatar src={props.image} className="message__avator" />
+          <p>  {props.name}  </p>
         </div>
-    )
-}
+        <div className="message__text">
+          <p> {props.message} </p>
+        </div>
+      </div>
+    );
+  }
+
+
+
 
 export default Message

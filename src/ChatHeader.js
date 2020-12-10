@@ -7,11 +7,11 @@ import People from '@material-ui/icons/People';
 
 import './ChatHeader.css'
 
-function ChatHeader() {
+function ChatHeader(props) {
     return (
         <div className="chat__header">
             <div className="chat__header_left">
-                # Test Channel Name
+                {props.name &&  <h1> # {props.name} </h1>}
             </div>
 
             <div className="chat__header_right">

@@ -1,6 +1,7 @@
 import * as actionType from './actionTypes'
 const initialState = {
-    channels:[]
+    channels:[],
+    messages:[]
 }
 
 const appReducer = (state=initialState, action)=>{
@@ -9,6 +10,12 @@ const appReducer = (state=initialState, action)=>{
             ...state,
             channels: action.value
         }
+        case actionType.ADD_MESSAGES : {
+            return {
+            ...state,
+            messages: action.value
+        }
+    }
         default : return state
     }
 }
